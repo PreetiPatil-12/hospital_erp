@@ -8,21 +8,21 @@ const connection=mysql.createConnection({
 });
 
 connection.connect(function(err){
-    connection.query("delete from patients ",function(err,result,fields){
+    connection.query("delete from patients where pId=4 ",function(err,result,fields){
         if(err) throw err;
         console.log(result);
     });
 });
 
 connection.connect(function(err){
-    connection.query("delete from staffs ",function(err,result,fields){
+    connection.query("delete from staffs where eId=4 ",function(err,result,fields){
         if(err) throw err;
         console.log(result);
     });
 });
 
 connection.connect(function(err){
-    connection.query("delete from doctors ",function(err,result,fields){
+    connection.query("delete from doctors where dName='Dr. Suhas' ",function(err,result,fields){
         if(err) throw err;
         console.log(result);
     });
